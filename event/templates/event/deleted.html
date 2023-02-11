@@ -1,0 +1,14 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/deleted.css' %}">
+
+
+<html>
+  <head>
+    <title>Ticket Deleted</title>
+  </head>
+  <body>
+    <h1>Your Ticket Has Been Deleted</h1>
+    <p>Your reservation has been successfully removed.</p>
+    <a href="{% url 'event_list' %}">Return to events list</a>
+  </body>
+</html>

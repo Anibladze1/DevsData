@@ -1,0 +1,21 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/event_list.css' %}">
+
+
+<h1><a href="{% url 'event_list' %}"></a>Events List</h1>
+
+<h2><a href="{% url 'delete_reservation' %}">Delete Your Ticket</a></h2>
+
+<br>
+<br>
+
+
+<ul>
+{% for event in events %}
+    <li>
+        <a href="{% url 'event_detail' event.pk %}">{{ event.name }}</a>
+        <img src="{{ event.image.url }}" alt="{{ event.name }}">
+    </li>
+{% endfor %}
+</ul>
+

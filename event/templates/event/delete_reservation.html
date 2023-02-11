@@ -1,0 +1,19 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/delete_reservation.css' %}">
+
+<h2>Delete Reservation</h2>
+
+<form method="post">
+  {% csrf_token %}
+  <p>Are you sure you want to delete the reservation for event?</p>
+
+    <input type="text" name="code" placeholder="Reservation Code">
+    <button type="submit">Delete Reservation</button>
+
+</form>
+
+
+<br>
+<br>
+
+<a class="see-all" href="{% url 'event_list' %}">Cancel</a>
